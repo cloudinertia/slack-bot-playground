@@ -1,0 +1,33 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::265988044348:role/budget-alarm-dev",
+      "role_name": "budget-alarm-dev"
+    },
+    {
+      "name": "perodic_report",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ap-northeast-2:265988044348:function:budget-alarm-dev-perodic_report"
+    },
+    {
+      "name": "perodic_report-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "budget-alarm-dev-perodic_report-event"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:ap-northeast-2:265988044348:function:budget-alarm-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "oo8jde4rw0",
+      "rest_api_url": "https://oo8jde4rw0.execute-api.ap-northeast-2.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
